@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('https://i.pinimg.com/originals/f6/ea/00/f6ea000fea4f2e267ffe7ad0d1bc474c.jpg'); /* Path to your image */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the image in the viewport */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px; /* Adjust the font size if necessary */
+  color: #333; /* Set a default text color that's visible on the background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+}
+
+.search-and-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  position: fixed; /* Make the search bar fixed */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  z-index: 10; /* High z-index to keep on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  border-radius: 0; /* Full width element, no need for border radius */
+}
+
+.home-feed {
+  padding: 20px;
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Max width to prevent overly wide posts */
+  margin-top: 100px; /* Margin to account for the fixed search bar */
+  overflow-y: auto; /* Scroll on y-axis */
+  height: calc(100vh - 100px); /* Adjust height to fill remaining space */
+  position: relative;
+  z-index: 1; /* Below fixed search bar */
+  backdrop-filter: blur(5px); /* Optional blur for background */
+}
+
+/* Ensure .home-feed children are stacked above the background */
+.home-feed > * {
+  position: relative;
+  z-index: 2;
+}
+
+.home-feed:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text readability */
+  border-radius: 10px;
+  z-index: 1; /* Overlay needs to be under the content */
+}
+
+.search-and-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px; /* Increased spacing */
+  background-color: #eff4ee;
+  padding: 15px; /* Increased padding */
+  border-radius: 10px; /* Soften the edges */
+  position: relative;
+  z-index: 2;
+}
+
+.search-input {
+  padding: 15px; /* Increased padding for larger input area */
+  border: 2px solid #6C8E15;
+  border-radius: 5px;
+  width: calc(100% - 300px); /* Adjust width to accommodate larger button */
+  font-size: 1.1rem; /* Increase font size for better visibility */
+  position: relative;
+  z-index: 2;
+}
+
+button {
+  padding: 15px 30px; /* Larger buttons for easier interaction */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem; /* Larger font size */
+  background-color: #6C8E15;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+button:hover {
+  background-color: #536A10;
+}
+
+.post-card {
+  background: #fbfbfb;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  padding: 25px; /* Increased padding */
+  margin-bottom: 30px; /* Adjusted spacing */
+  border-radius: 8px; /* Soften the edges */
+  border-left: 5px solid #D3A625; /* A thicker thematic border */
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-left-color 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.post-card:hover {
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* More noticeable hover effect */
+  border-left-color: #6C8E15;
+}
+
+.post-card .post-header h2 {
+  color: #333;
+  font-size: 2em; /* Larger font size for titles */
+  margin-bottom: 15px; /* Increased spacing */
+}
+
+.post-card .post-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem; /* Increased font size for metadata */
+  color: #666;
+  position: relative;
+  z-index: 2;
+}
+
+.post-card .post-meta span {
+  background-color: #D3A625;
+  padding: 8px 16px; /* Larger badges */
+  border-radius: 18px; /* Rounded edges */
+}

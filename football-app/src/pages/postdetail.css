@@ -1,0 +1,128 @@
+.post-detail {
+  width: 80%;
+  margin: 40px auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Adds rounded corners */
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem; /* Adds space between the header and the content */
+}
+
+.post-header h2 {
+  font-size: 1.8rem; /* Increase the font size */
+  color: #333; /* Darker text for better readability */
+  flex: 1; /* Allows the title to take up the available space */
+}
+
+.post-header button {
+  background-color: #4CAF50; /* A green background for the upvote button */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px; /* Rounded edges for buttons */
+  cursor: pointer;
+}
+
+.post-header time {
+  font-style: italic;
+  color: #555;
+}
+
+.actions button {
+  background-color: #f44336; /* A red background for the delete button */
+  margin-left: 1rem; /* Spacing between edit and delete buttons */
+}
+
+img {
+  max-width: 100%; /* Ensures the image is not larger than its container */
+  height: auto;
+  margin-top: 2rem;
+}
+
+video {
+  max-width: 100%; /* Ensures the video is not larger than its container */
+  height: auto;
+  margin-top: 2rem;
+}
+
+p {
+  color: #666; /* Slightly lighter text color for the content */
+  line-height: 1.6; /* More readable line height */
+}
+
+.comments-section {
+  background-color: #f9f9f9; /* A light background for the comments section */
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 8px; /* Rounded corners for the comments section */
+}
+
+.comment {
+  background-color: #f1f1f1;
+  padding: 0.1rem; /* Reduced padding to decrease height */
+  margin-bottom: 1rem;
+  /* Set a specific height or min-height and max-height depending on your design: */
+  height: auto; /* Or you can set a specific height like 50px if you want a fixed height */
+  overflow: auto; /* In case the content exceeds the height, it will be scrollable */
+}
+
+/* If you want to reduce the height of the comment input box as well: */
+.comments-section textarea {
+  min-height: 30px; /* Adjust this value to make the initial textarea smaller */
+  /* ... other styles ... */
+}
+
+
+textarea {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px; /* Rounded edges for the textarea */
+  border: 1px solid #ccc; /* Subtle border */
+  height: 100px; /* Fixed height for the textarea */
+}
+
+button {
+  background-color: #2196F3; /* A blue background for the add comment button */
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9; /* Slight feedback effect on hover */
+}
+
+/* Set a maximum size for the image */
+.post-detail img {
+  max-width: 50%; /* ensures the image is responsive and doesn't overflow its container */
+  max-height: 500px; /* sets the maximum height */
+  display: block; /* images are inline by default, which can cause extra space below them */
+  margin: 0 auto; /* this will center the image in its container */
+}
+
+/* Set a default size for the comment textarea */
+.comments-section textarea {
+  min-height: 20px; /* sets a minimum height */
+  max-height: 30px; /* you can adjust this as necessary */
+  /* other styles */
+}
+
+/* If you want to also limit the width of the comments section */
+.comments-section {
+  max-width: 100%; /* ensures the comment section doesn't overflow its container */
+  /* other styles */
+}
+
+.comments-section textarea::placeholder {
+  color: #a9a9a9; /* Placeholder text color */
+  /* Add other styles if necessary */
+}

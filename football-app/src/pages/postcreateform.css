@@ -1,0 +1,66 @@
+.post-create-form {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #FAF9F6;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  border: 1px solid #C9B79C;
+  box-sizing: border-box;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.post-create-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.post-create-form input[type="text"],
+.post-create-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #ced4da;
+  border-radius: 0.375rem;
+  background-color: #fff;
+  font-size: 0.875rem;
+  transition: border-color 0.15s ease-in-out;
+  color: #000;
+}
+
+.post-create-form input[type="text"]:focus,
+.post-create-form textarea:focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.post-create-form button {
+  width: 100%;
+  padding: 0.75rem 0;
+  background-color: #6C8E15;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  transition: background-color 0.15s ease-in-out;
+  margin-top: 1rem;
+}
+
+.post-create-form button:hover {
+  background-color: #536A10;
+}
+
+.error {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
